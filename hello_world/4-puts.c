@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
-*main - puts
+*function - main entry voided
 *return - always zero
 */
-int main (void) 
+int main(void) 
 {
-	puts("\"Programming is like building a multilingual puzzle\n");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
