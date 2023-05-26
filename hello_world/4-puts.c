@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-*function - main entry voided
-*return - always zero
+*function ( : ) - puts program is like building
+*return:- value of 'main (....)
 */
 int main(void) 
 {
