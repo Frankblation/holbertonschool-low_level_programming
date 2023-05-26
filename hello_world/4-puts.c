@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-*function ( : ) - puts program is like building
-*return:- value of 'main (....)
+ *function ( : ) - puts program is like building
+ *return: - value of 'main remained zero(....)
 */
 int main(void)
 {
