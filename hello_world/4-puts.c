@@ -1,8 +1,11 @@
 #include <stdio.h>
 /**
- *my_function - main value is zero
- *Description: puts with a return value of (0)
+ * main - entry point
+ * my_function - puts
+ * Description: puts with a return value of zero
+ * Return: Always 0 (success)
  */
+
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
