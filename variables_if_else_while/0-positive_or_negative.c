@@ -4,12 +4,13 @@
 
 /**
  * main - Entry Point
- * destriction: do this/or this/and this
+ * description: do this/or this/and this
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int nn;
+	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
@@ -23,7 +24,7 @@ int main(void)
 	}
 	else
 	{
-		printf("%d is negative \n". n);
+		printf("%d is negative \n", n);
 	}
 	return (0);
 }
