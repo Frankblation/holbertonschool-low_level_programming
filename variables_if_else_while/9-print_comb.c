@@ -1,33 +1,24 @@
 #include <stdio.h>
 
 /**
- * main - Prints the numbers from 1-100, but for multiples of three,
- * Return: Always 0.
+ * main - Entry point
+ *
+ * Return: Always 0 (Succes)
  */
+
 int main(void)
 {
-	int num;
+	int n;
 
-	for (num = 1; num <= 100; num++)
+	for (n = 0 ; n < 10 ; n++)
 	{
-		if ((num % 3) == 0 && (num % 5) == 0)
-			printf("FizzBuzz");
-
-		else if ((num % 3) == 0)
-			printf("Fizz");
-
-		else if ((num % 5) == 0)
-			printf("Buzz");
-
-		else
-			printf("%d", num);
-
-		if (num == 100)
-			continue;
-		printf(" ");
+		putchar(n + '0');
+		if (n < 9)
+		{
+			putchar(',');
+			putchar(32);
+		}
 	}
-
-	printf("\n");
-
+	putchar('\n');
 	return (0);
 }
