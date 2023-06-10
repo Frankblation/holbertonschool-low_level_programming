@@ -2,13 +2,14 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * _strncat - main file copies one string to another
- * @dest
- * @src
- * Return: Always 0
+ * _strncat - Concatenates two strings using imputed numner of bytes
+ * @des: The string to be appended upon.
+ * @src: The string to append to dest.
+ * @n: The number of bytes from src to be appended to dest.
+ * Return: A pointer to the resulting string dest.
  */
 
-char _strncat(char *dest, const char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	char *ptr = dest;
 
