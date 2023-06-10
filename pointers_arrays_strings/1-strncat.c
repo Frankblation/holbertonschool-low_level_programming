@@ -1,13 +1,14 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 /**
- * *_strncat - main file copies one string to another
+ * _strncat - main file copies one string to another
  * @dest
  * @src
  * Return: Always 0
  */
 
-char *_strncat(char *dest, const char *src, int n)
+char _strncat(char *dest, const char *src, int n)
 {
 	char *ptr = dest;
 
