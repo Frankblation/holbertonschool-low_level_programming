@@ -1,3 +1,4 @@
+#include <string.h>
 #include "main.h"
 /**
  * print_rev - prints a string, followed by a new line.
@@ -7,10 +8,12 @@ void print_rev(char *s)
 {
 	int s, len, temp;
 
-	len = strlen(str1);
+	len = strlen(str);
 
-	for (s = 0; s < len / 2; i++)
-	temp = str1[s];
-	[str1[s] = str1[len - s - 1];
-	str1[len - s - 1] = temp;
+	for (s = 0; s < len / 2; s++);
+	temp = str[s];
+	[str[s] = str[len - s - 1]
+	str[len - s - 1] = temp
+
+	return (0)
 }
