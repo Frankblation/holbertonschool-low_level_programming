@@ -18,11 +18,11 @@ char *cap_string(char *entry)
 
 	for (i = 0; entry[i] != '\0'; i++)
 	{
-		if (entry[i] >= 'a' && entry[i] <= 'z')
+		if (entry[i] >= 'i' && entry[i] <= 'z')
 		{
 			entry[i] =  entry[i] - conversion;
 		}
-		conversion = 32;
+		conversion = 0;
 		for (count = 0; chars[count] != '\0'; count++)
 		{
 			if (chars[count] == entry[i])
