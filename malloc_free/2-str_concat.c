@@ -1,40 +1,36 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
- * _strdup - returns a pointer to a newly allocated space in memory, which
- * contains a copy of the string given as a parameter
- * @str: string to return
- * Return: NULL if str = NULL. On success the _strdup returns a pointer to the
- * duplicated string. It returns NULL if insufficient memory was available
+ * str_concat - concatenate strings
+ * @s1: string 1
+ * @s2: string 2
+ * Return: NULL if failure
  */
-
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	char *p = NULL;
-	unsigned int m;
-	unsigned int size = 0;
+	char *s;
+	int a, b, c, d;
 
-	if (str == NULL)
-	{
+	if (s1 == 0)
+		s1 = "";
+	if (s2 == 0)
+		s2 = "";
+	for (a = 0; s1[a] != '\0'; a++)
+		;
+	for (b = 0; s2[b] != '\0'; b++)
+		;
+	b++;
+	s = malloc(a * sizeof(*s1) + b * sizeof(*s2));
+	if (s == 0)
 		return (NULL);
-	}
-
-	for (m = 0; str[m] != '\0'; m++)
+	for (c = 0, d = 0; c < a + b; c++)
 	{
-		size++;
+		if (c < a)
+			s[c] = s1[c];
+		else
+			s[c] = s2[d++];
 	}
-	p = (char *)malloc((size + 1) * sizeof(char));
-
-	if (p != NULL)
-	{
-		for (m = 0; m < size; m++)
-			p[m] = str[m];
-	}
-	else
-	{
-		p = NULL;
-	}
-	return (p);
+	return (s);
 }
