@@ -11,6 +11,7 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
+
 	char *sep;
 	unsigned int i;
 	va_list list;
