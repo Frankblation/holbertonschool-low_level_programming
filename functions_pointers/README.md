@@ -1,0 +1,1 @@
+funktions and pointers
