@@ -9,6 +9,7 @@
 
 int main(int argc, char *argv[])
 {
+
 	int i, j;
 	int (*d)(int, int);
 
