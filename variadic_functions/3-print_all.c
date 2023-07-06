@@ -8,18 +8,16 @@
  */
 void print_all(const char * const format, ...)
 {
-
 	va_list args;
 	int i = 0;
 	char *str;
 
 	va_start(args, format);
-
 	while (format && format[i])
 	{
-		if (i != 0 && (format[i - 1] == 'c' || format[i - 1] == 'i' || format[i - 1] == 'f' || format[i - 1] == 's'))
+		if (i != 0 && (format[i - 1] == 'c' || format[i - 1] == 'i' ||
+		format[i - 1] == 'f' || format[i - 1] == 's'))
 			printf(", ");
-
 		switch (format[i])
 		{
 			case 'c':
