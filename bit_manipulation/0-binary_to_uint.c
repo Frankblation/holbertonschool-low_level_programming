@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 * binary_to_unit - binary to int
 * @b: pointer
