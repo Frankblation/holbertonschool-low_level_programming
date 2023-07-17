@@ -1,3 +1,21 @@
-#include "list.h"
+#include "lists.h"
 
-void free_list(list_t *head);
+/**
+ * free_list - function with one argument
+ * @head: pointer to list_t
+ *
+ * Description: frees a list
+ * Return: void
+ */
+void free_list(list_t *head)
+{
+	list_t *move;
+
+	while (head != NULL)
+	{
+		move = head->next;
+		free(head->str);
+		free(head);
+		head = move;
+	}
+}
