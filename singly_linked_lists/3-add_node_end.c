@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * add_node_end - function with two arguments
  * @head: pointer to linked list

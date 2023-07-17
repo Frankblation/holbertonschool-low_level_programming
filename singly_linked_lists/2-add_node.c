@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * add_node - function with two arguments
  * @head: double pointer to linked list
