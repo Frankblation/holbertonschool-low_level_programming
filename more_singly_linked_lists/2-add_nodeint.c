@@ -1,60 +1,21 @@
 #include "lists.h"
+#include <string.h>
 /**
- * add_nodeint - function with two arguments
- * @head: double pointer to linked list
- * @n: Integer to be found
+ * add_nodeint - adds a node of listint_t to the head of a linked list
+ * @head: pointer to a list_t pointer that points to the head struct
+ * @n: integer data to put in new node
  *
- * Description: put a new node at the beginning
- * Return: new element
+ * Return: pointer to new head of list, NULL on failure
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	int count = 0;
-	listint_t *temp;
+	listint_t *temp_head;
 
-	temp = malloc(sizeof(listint_t));
-	if (temp == NULL)
+	temp_head = *head;
+	*head = malloc(sizeof(listint_t));
+	if (!*head)
 		return (NULL);
-	temp->str = _strdup(str);
-	while (str[count] != '\0')
-		count++;
-	temp->len = count;
-	temp->next = *head;
-	*head = temp;
-	return (temp);
-}
-
-/**
- * *_strdup - function with one argument
- * @str: string argument
- *
- * Description: returns memory from pointer
- * Return: pointer
- */
-char *_strdup(const char *str)
-{
-	int i, j;
-	char *ptr;
-
-	if (str == NULL)
-		return (NULL);
-	i = 0;
-	while (*(str + i) != '\0')
-	{
-		i++;
-	}
-
-	ptr = malloc(sizeof(char) * i + 1);
-
-	if (ptr == NULL)
-		return (NULL);
-
-	j = 0;
-	while (str[j] != '\0')
-	{
-		ptr[j] = str[j];
-		j++;
-	}
-	ptr[j] = '\0';
-	return (ptr);
+	(*head)->n = n;
+	(*head)->next = temp_head;
+	return (*head);
 }
