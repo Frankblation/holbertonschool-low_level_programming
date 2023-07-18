@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
-* binary_to_unit - binary to int
+* binary_to_uint - binary to int
 * @b: pointer
 * Return: return (i)
 */
 
 unsigned int binary_to_uint(const char *b)
 {
+
 	int i;
 
 	if (b == NULL)
