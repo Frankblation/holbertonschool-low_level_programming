@@ -7,7 +7,8 @@
  *
  * Description: reads a text file and prints
  * Return: 0 if filename is NULL or write fails
- */
+*/
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd = 0;
