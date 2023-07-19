@@ -8,12 +8,13 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *new_head;
-	int n_of_deleted_head;
+	int = n;
 
 	if (!*head) /* HEAD is NULL, empty list */
 		return (0);
-	n_of_deleted_head = (*head)->n;
+	n = (*head)->n;
 	new_head = (*head)->next;
 	free(*head);
 	*head = new_head;
-	return (n_of_deleted_head);
+	return (n);
+}
