@@ -2,7 +2,6 @@
 /**
  * pop_listint - pops a list element from the beginning of a list
  * @head: double pointer to head of list
- * @n: is int
  * Return: value of n for element deleted
  */
 int pop_listint(listint_t **head)
