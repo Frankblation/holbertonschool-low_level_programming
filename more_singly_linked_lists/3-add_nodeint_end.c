@@ -1,77 +1,32 @@
 #include "lists.h"
+
 /**
- * add_node_end - function with two arguments
- * @head: pointer to linked list
- * @n: integer to be returned
+ * add_nodeint_end - function with two arguments
+ * @head: double pointer to head of first linked list
+ * @n: integer value of data in node
  *
- * Description: adds a new node at the end of linked list
+ * Description: add a new node at the end of linked list
  * Return: address of new element
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	int count = 0;
-	 listint_t*end_node, *cursor;
+	listint_t *temp, *cursor;
 
-	end_node = malloc(sizeof()listint_t);
-	if (end_node == NULL)
+	temp = malloc(sizeof(listint_t));
+	if (temp == NULL)
 		return (NULL);
 
-	if (str)
-	{
-		end_node->str = _strdup(str);
-		while (str[count] != '\0')
-			count++;
-		end_node->len = count;
-	}
-	else
-	{
-		end_node->str = NULL;
-		end_node->len = 0;
-	}
-	end_node->next = NULL;
+	temp->next = NULL;
+	temp->n = n;
+
 	if (*head)
 	{
-	cursor = *head;
-	while (cursor->next != NULL)
-		cursor = cursor->next;
-	cursor->next = end_node;
+		cursor = *head;
+		while (cursor->next != NULL)
+			cursor = cursor->next;
+		cursor->next = temp;
 	}
 	else
-		*head = end_node;
-	return (end_node);
-}
-
-/**
- * *_strdup - function with one argument
- * @str: string argument
- *
- * Description: returns a pointer
- * Return: pointer
- */
-char *_strdup(const char *str)
-{
-	int i, j;
-	char *ptr;
-
-	if (str == NULL)
-		return (NULL);
-	i = 0;
-	while (*(str + i) != '\0')
-	{
-		i++;
-	}
-
-	ptr = malloc(sizeof(char) * i + 1);
-
-	if (ptr == NULL)
-		return (NULL);
-
-	j = 0;
-	while (str[j] != '\0')
-	{
-		ptr[j] = str[j];
-		j++;
-	}
-	ptr[j] = '\0';
-	return (ptr);
+		*head = temp;
+	return (temp);
 }
