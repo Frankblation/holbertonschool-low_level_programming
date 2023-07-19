@@ -1,5 +1,5 @@
-#include "holberton.h"
-#include <stdio.h>
+#include "main.h"
+
 /**
   * main - entry point
   * @ac: argument count
