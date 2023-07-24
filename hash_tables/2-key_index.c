@@ -9,8 +9,14 @@
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
+    unsigned long int hash_code;
+    unsigned long int index;
 
-    /*use the djb2 algo to hash the key and take*/
-    /* the % w/ the size of the HT to get the index*/
-    return (hash_djb2(key) % size);
+    /* Calculate the hash code using the hash_djb2 function */
+    hash_code = hash_djb2(key);
+
+    /* Calculate the index using the modulo operator */
+    index = hash_code % size;
+
+    return (index);
 }
