@@ -9,6 +9,7 @@
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
+
 	dlistint_t *new_node = malloc(sizeof(dlistint_t));
 
 	if (new_node == NULL)
@@ -19,14 +20,20 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 
 	if (*head == NULL)
 	{
-		/* If the list is empty, the new node will be the head and tail. */
+
+	/* If the list is empty, the new node will be the head and tail. */
+
 		new_node->prev = NULL;
 		*head = new_node;
 	}
+
 	else
+
 	{
-		/* If the list is not empty, find the last node and add the new node after it. */
+/* If not empty, find the last node and add the new node after it. */
+
 		dlistint_t *current = *head;
+
 		while (current->next != NULL)
 		{
 			current = current->next;
