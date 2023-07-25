@@ -15,7 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     hash_node_t *new_node, *current_node;
 
     /* Check if the hash table, key, or value is NULL */
-    if (ht == NULL || key == NULL || value == NULL || *key == '\0')
+    if (ht == NULL || key == NULL || value == NULL || strlen(key) == 0)
         return (0);
 
     /* Calculate the index for the given key using key_index function */
@@ -28,10 +28,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         if (strcmp(current_node->key, key) == 0)
         {
             /* Key already exists, update the value and return 1 */
-            free(current_node->value); // Free the old value
-            current_node->value = strdup(value); // Duplicate the new value
+            free(current_node->value); /* Free the old value */
+            current_node->value = strdup(value); /* Duplicate the new value */
             if (current_node->value == NULL)
-                return (0); // Return 0 if strdup fails
+                return (0); /* Return 0 if strdup fails */
             return (1);
         }
         current_node = current_node->next;
@@ -42,18 +42,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
     if (new_node == NULL)
         return (0);
 
-    new_node->key = strdup(key); // Duplicate the key
+    new_node->key = strdup(key); /* Duplicate the key */
     if (new_node->key == NULL)
     {
-        free(new_node); // Free the new_node if strdup fails
+        free(new_node); /* Free the new_node if strdup fails */
         return (0);
     }
 
-    new_node->value = strdup(value); // Duplicate the value
+    new_node->value = strdup(value); /* Duplicate the value */
     if (new_node->value == NULL)
     {
-        free(new_node->key); // Free the key if strdup fails
-        free(new_node); // Free the new_node if strdup fails
+        free(new_node->key); /* Free the key if strdup fails */
+        free(new_node); /* Free the new_node if strdup fails */
         return (0);
     }
 
