@@ -18,5 +18,6 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
     /* Calculate the index using the modulo operator */
     index = hash_code % size;
 
+
     return (index);
 }
