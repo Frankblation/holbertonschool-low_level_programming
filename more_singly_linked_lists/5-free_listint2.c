@@ -1,30 +1,20 @@
 #include "lists.h"
 
 /**
- * hash_table_delete - Deletes a hash table.
- * @ht: The hash table to be deleted.
+ * free_listint2 - Frees a listint_t list and sets the head to NULL.
+ * @head: Pointer to the pointer to the head of the linked list.
  */
-void hash_table_delete(hash_table_t *ht)
+void free_listint2(listint_t **head)
 {
-	unsigned long int i;
-	hash_node_t *current_node, *next_node;
+    listint_t *current;
 
-	if (ht == NULL)
-		return;
+    if (head == NULL)
+        return;
 
-	for (i = 0; i < ht->size; i++)
-	{
-		current_node = ht->array[i];
-		while (current_node != NULL)
-		{
-			next_node = current_node->next;
-			free(current_node->key);
-			free(current_node->value);
-			free(current_node);
-			current_node = next_node;
-		}
-	}
-
-	free(ht->array);
-	free(ht);
+    while (*head != NULL)
+    {
+        current = *head;
+        *head = (*head)->next;
+        free(current);
+    }
 }
