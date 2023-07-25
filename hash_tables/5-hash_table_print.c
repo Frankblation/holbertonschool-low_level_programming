@@ -4,6 +4,7 @@
  * hash_table_print - Prints a hash table.
  * @ht: The hash table to be printed.
  */
+
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
