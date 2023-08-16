@@ -4,6 +4,7 @@
 * @array: the array
 * @size: size of the number in array
 * @value: the key
+* Return: return i return  -1
 */
 int linear_search(int *array, size_t size, int value)
 {
